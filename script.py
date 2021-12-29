@@ -15,16 +15,10 @@ driver = webdriver.Chrome(options=options)
 driver.get('https://isthisprime.com/game/')
 driver.maximize_window()
 
-print("before")
 WebDriverWait(driver, 10000).until(EC.visibility_of_element_located((By.CLASS_NAME, 'play')))
-print('after')
 
 keyboard = Controller()
 primes = insertPrimes()
-print(primes)
-
-print(53 in primes)
-
 startTime = time.time()
 duration = 60
 
@@ -33,7 +27,6 @@ while True:
     currentTime = time.time()
     elapsedTime = currentTime - startTime
     if(elapsedTime > duration):
-        print('done')
         break
     time.sleep(0.005)
     if(int(number.text) in primes):
