@@ -4,7 +4,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
-#from prime import isPrime
 from prime import insertPrimes
 
 import time
@@ -41,8 +40,3 @@ while True:
         keyboard.tap(Key.left)
     else:
         keyboard.tap(Key.right)
-
-
-#time.sleep(2)
-#keyboard.press(key)
-#keyboard.release(key)
